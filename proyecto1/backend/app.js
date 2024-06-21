@@ -2,7 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 //Variables de entorno -> nos guardan informacion delicada
-
+import { connexionMongo } from "./config/database.js";
 
 // 2. configurar el uso de nuestro servidor y de nuestras varialbles de
 
@@ -10,8 +10,10 @@ const app = express();// configuramos nuestro servidor
 dotenv.config(); // configuramos nuestras variables de entorno
 const port = process.env.PORT;
 
+//conectese a la base de datos
+connexionMongo();
 
-// 3. escuchar nuestro servidor
+//3. escuchar nuestro servidor (ejecutarlo)
 app.listen(port, ()=>{
-console.log(`estoy funcionando`)
+    console.log(`El servidor se está escuchando en: http://localhost:${port}`);
 });
