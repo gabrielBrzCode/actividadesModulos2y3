@@ -1,6 +1,6 @@
 [{
 "nombre":"Iphone 15 pro max",
-"foto" :"https://www.cnet.com/a/img/resize/df090d192f865b81f2433dbee5995e26e7b62f50/hub/2023/09/18/c44256ef-e6c1-41bb-b77b-648792f47c6c/iphone15-pro-64.jpg?auto=webp&fit=crop&height=1200&width=1200"
+"imagen" :"https://www.cnet.com/a/img/resize/df090d192f865b81f2433dbee5995e26e7b62f50/hub/2023/09/18/c44256ef-e6c1-41bb-b77b-648792f47c6c/iphone15-pro-64.jpg?auto=webp&fit=crop&height=1200&width=1200"
 ,
 "precio" : "$6.579.010",
 "modelo" : "256 GB 5G Titanio Negro"
@@ -8,7 +8,7 @@
 },
 {
     "nombre":"SAMSUNG Galaxy Zfold5",
-    "foto" :"https://tuscelularesbaratos.com/cdn/shop/files/SamGalaxyZFold5-3_900x_3fcd3edb-6612-429d-ba8d-755e6afc3374.webp?v=1692470367&width=900"
+    "imagen" :"https://tuscelularesbaratos.com/cdn/shop/files/SamGalaxyZFold5-3_900x_3fcd3edb-6612-429d-ba8d-755e6afc3374.webp?v=1692470367&width=900"
     ,
     "precio" : "$7.599.990",
     "modelo" : "512GB Azul"
@@ -16,7 +16,7 @@
     },
     {
         "nombre":"SAMSUNG Galaxy S24 Ultra",
-        "foto" :"https://images.samsung.com/co/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-titanium-gray-back-mo.jpg?imbypass=true"
+        "imagen" :"https://images.samsung.com/co/smartphones/galaxy-s24-ultra/images/galaxy-s24-ultra-highlights-color-titanium-gray-back-mo.jpg?imbypass=true"
         ,
         "precio" : "$$7.499.990",
         "modelo" : "512GB Gris"
@@ -24,7 +24,7 @@
         },
         {
             "nombre":" HUAWEI Pura70 Ultra ",
-            "foto" :"https://s1.elespanol.com/2024/05/16/elandroidelibre/moviles-android/analisis/855674494_242322872_1024x576.jpg"
+            "imagen" :"https://s1.elespanol.com/2024/05/16/elandroidelibre/moviles-android/analisis/855674494_242322872_1024x576.jpg"
             ,
             "precio" : "$6.999.900"
 ,
@@ -32,7 +32,7 @@
             
             },{
                 "nombre":"Celular SAMSUNG Galaxy S24 ",
-                "foto" :"https://hiraoka.com.pe/media/catalog/product/s/2/s24_amber_yellow_0.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=560&width=700&canvas=700:560"
+                "imagen" :"https://hiraoka.com.pe/media/catalog/product/s/2/s24_amber_yellow_0.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=560&width=700&canvas=700:560"
                 ,
                 "precio" : "$4.499.990",
                 "modelo" : "128GB Amarillo"
