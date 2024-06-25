@@ -17,7 +17,7 @@ productsRouter.get("/obtenerProductos",getProducts);
 // ruta para la peticion POST
 productsRouter.post("/crearProducto", postProduct );
 // ruta para la peticion DELETE
-productsRouter.delete("/eliminarProducto/:_id" ,deleteProductById );
+productsRouter.delete("/borrarProducto/:_id" ,deleteProductById );
 // ruta para la peticion PUT
 productsRouter.put("/actualizarProducto/:_id", putProductById) ;
 
