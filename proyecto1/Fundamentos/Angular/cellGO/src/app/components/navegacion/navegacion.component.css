@@ -1,0 +1,11 @@
+.miLista{
+    display: flex;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    background-color: rgb(0, 0, 0);
+ color: white;
+}
