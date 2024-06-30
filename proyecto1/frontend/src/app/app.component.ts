@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { InicioComponent } from './pages/inicio/inicio.component';
-import { IngresoComponent } from './pages/ingreso/ingreso.component';
-import { AdminComponent } from './pages/admin/admin.component';
-import { ProductosComponent } from './pages/productos/productos.component';
+import { NavegacionComponent } from './components/navegacion/navegacion.component';
+import { FooterComponent } from './components/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, InicioComponent, IngresoComponent, AdminComponent,ProductosComponent],
+  imports: [RouterOutlet, NavegacionComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

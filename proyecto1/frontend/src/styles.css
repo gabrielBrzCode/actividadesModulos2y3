@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+
+    background-image: linear-gradient(135deg, #00B7D4, #2e70c0, #607ffd, #5755c8, #5755b4, #9b5295, #de447f);
+    background-size: 500%;
+    animation: animado 10s infinite;
+}
+
+@keyframes animado {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+100%{
+    background-position: 0% 50%;
+}
+}
