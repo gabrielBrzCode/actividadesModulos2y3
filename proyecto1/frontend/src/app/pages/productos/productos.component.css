@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+.Venta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  padding: 50px; 
+}
 
 .container {
 
+width: 80%;
   background-color: rgba(17, 25, 40, 0.25);
   border-radius: 7px;
   padding: 30px;  
@@ -73,7 +80,7 @@ p {
 }
 
 .button-wrapper{
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .btn {
@@ -92,6 +99,7 @@ p {
   color: rgba(0, 212, 255, 0.9);
   border: 1px solid rgba(0, 212, 255, 0.6);
   transition: all .3s ease;
+  font-weight: bold;
   
 }
 

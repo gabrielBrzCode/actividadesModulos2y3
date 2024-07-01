@@ -1,5 +1,9 @@
-.pa{
-    font-size: 25px;
-    font-weight: 700;
-    color: blueviolet;
+main{
+    width: 100%;
+    height: 75vh;
+}
+.miTabla{
+   width: 80%;
+   height: 300px;
+   margin: 0 auto;
 }

@@ -1,14 +1,53 @@
+@import url('https://fonts.cdnfonts.com/css/ruby-buster');
+
+
+
+
 .miLista {
-
     display: flex;
-    width: 100%;
-
-   
+    width: 80%;
+    height: 90px;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 20px;
-    gap: 50px;
+    gap: 100px;
     background-color: rgb(25, 25, 27);
+margin: 0 auto;
     color: white;
     text-decoration: none;
     list-style: none;
-    
+}
+
+.miLista::after {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 100px solid rgba(255, 255, 255, 0.123);
+    z-index: 200;
+}
+
+
+.firma a {
+
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: 'Ruby Buster', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-shadow: 4px 20px 20px rgb(0, 128, 255);
+    font-weight: 100;
+
+
+}
+
+.carrito {
+    color: white;
+
+    font-size: 22px;
 }
