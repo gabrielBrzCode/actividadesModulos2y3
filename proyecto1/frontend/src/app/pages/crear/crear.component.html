@@ -1,0 +1,76 @@
+ <main>
+    <div   *ngIf="isAdding" >
+    
+    <div class="row mt-1">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-white bg-secondary mb-2" style="max-width: 25rem;">
+            <div class="card-header  text-center">FORMULARIO DE CREACION DE PRODUCTOS</div>
+            <div class="card-body">
+        
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control"  name="nombre"
+            placeholder="Ingrese el nombre del vehiculo" required=""  [(ngModel)]="nombre"/>
+         
+        </div>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="text" class="form-control" placeholder="Ingrese el url de la imagen del vehiculo"  name="imagen" [(ngModel)]="imagen"/>
+        </div>
+       
+        <div class="mb-3">
+            <label for="modelo" class="form-label">Precio</label>
+            <input type="text" class="form-control" placeholder="Ingrese el modelo del vehiculo"  name="precioBase" [(ngModel)]="modelo"/>
+        </div>
+        
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" placeholder="Ingrese el precio del vehiculo" required=""  name="precio" [(ngModel)]="precio"/>
+        </div>
+        
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3" (click)="crearProducto()">Crear Producto</button>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- <div class="row mt-1">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+            <div class="card-header text-center">Producto</div>
+            <div class="card-body">
+                <form [formGroup]="form"] (ngSubmit)="crearProducto()">
+                    <input formControlName="nombre" type="text" class="form-control" placeholder="Ingrese nombre">
+                    <span *ngIf="form.get('nombre')?.hasError('required') && form.get('nombre')?.touched">
+                        El campo nombre es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="modelo" type="text" class="form-control mt-2" placeholder="Ingrese modelo">
+                    <span *ngIf="form.get('modelo')?.hasError('required') && form.get('modelo')?.touched">
+                        El campo modelo es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="precio" type="number" class="form-control mt-2" placeholder="Ingrese precio">
+                    <span *ngIf="form.get('precio')?.hasError('required') && form.get('precio')?.touched">
+                        El campo precio es <strong>requerido</strong>
+                    </span>
+                    <input formControlName="imagen" type="number" class="form-control mt-2" placeholder="Ingrese imagen">
+                    <span *ngIf="form.get('imagen')?.hasError('required') && form.get('imagen')?.touched">
+                        El campo imagen es <strong>requerido</strong>
+                    </span>
+                    <div class="row mt-2 text-center">
+                        <div class="col-lg-6">
+                            <button routerLink="/" type="button" class="btn btn-secondary">Volver</button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Aceptar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+ </main> 
+

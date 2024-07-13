@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 .Venta{
   display: flex;
@@ -10,9 +10,9 @@
 
 .container {
 
-width: 80%;
+width: 90%;
   background-color: rgba(17, 25, 40, 0.25);
-  border-radius: 7px;
+  border-radius: 15px;
   padding: 30px;  
   filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
   display: flex;
@@ -20,16 +20,19 @@ width: 80%;
   align-items: center;
   justify-content:center;
   text-align: center;
-  
+  border: solid 2px white;
 }
-
-.wrapper {
-  width: 30%;
-  height: 30%;
+ .container img{
+  border: solid 1px white;
+  border-radius: 15px;
+  width: 300px;
+  height: 200px;
+  object-fit:cover;
   
-}
+ }
 
-.banner-image {
+
+/* .banner-image {
   background-image: url(https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
   background-position: center;
  
@@ -59,7 +62,7 @@ width: 80%;
     width:300px;
     border-radius: 7px;
     border: 1px solid rgba(255,255,255, 0.255)
-}
+} */
 
 h1{
   font-family: 'Righteous', sans-serif;

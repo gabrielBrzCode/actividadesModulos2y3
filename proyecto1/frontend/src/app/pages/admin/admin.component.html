@@ -1,33 +1,35 @@
 <main>
-    <div class="container mt-4">
+    <div class=" mt-4 pb-5 bg-dark miTabla ">
         <h2 class="mb-4 text-center text-white">Tabla de Productos</h2>
-        <table class="table table-bordered text-center miTabla">
+         <div class="btn-admin">
+            <button [routerLink]="['/crear']" type="button" class="btn btn-success m-2" >Crear</button>
+            <button  type="button" class="btn btn-primary m-2">Actualizar</button>
+           
+        </div>
+ 
+        @for(producto of allProducts; track $index){
+        <table class="table table-bordered text-center ">
             <thead>
                 <tr>
                     <th>Nombre</th>
                     <th>Imagen</th>
                     <th>Modelo</th>
                     <th>Precio</th>
-                    <th>Acciones</th>
+                    <th>Gestion de productos</th>
+                  
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>LANCER EVOLUTION</td>
-                    <td><img src="ruta_a_la_imagen" alt="Imagen del Producto" style="max-width: 100px;"></td>
+                    <td>{{producto.nombre}}</td>
+                    <td><img src="{{producto.imagen}}" alt="Imagen del Producto" style="max-width: 100px;"></td>
                     <td>
-
-                        EVO 9 3.0 LITROS
+                        {{producto.modelo}}
                     </td>
-                    <td>$100.00</td>
-                    <td>
-                        <button type="button" class="btn btn-success m-2">Crear</button>
-                        <button type="button" class="btn btn-primary m-2">Actualizar</button>
-                        <button type="button" class="btn btn-dark m-2">Eliminar</button>
-                    </td>
-              
+                    <td>${{producto.precio}}0</td>
+               <td> <button type="button" class="btn btn-dark m-2" (click)="eliminarProducto(producto._id)">Eliminar</button></td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>SUBARU IMPREZA</td>
                     <td><img src="ruta_a_la_imagen" alt="Imagen del Producto" style="max-width: 100px;"></td>
                    <td>WRX STI 2.0</td>
@@ -45,14 +47,14 @@
         
                     <td>$100.00</td>
                     <td>
-                        <button type="button" class="btn btn-success m-2">Crear</button>
-                        <button type="button" class="btn btn-primary m-2">Actualizar</button>
-                        <button type="button" class="btn btn-dark m-2">Eliminar</button>
+                        <button type="button" class="btn btn-success m-2" routerLink="/crear" >Crear</button>
+                        <button type="button" class="btn btn-primary m-2" routerLink="/actualizar">Actualizar</button>
+                        <button type="button" class="btn btn-dark m-2" routerLink="/eliminar">Eliminar</button>
                     </td>
-                </tr>
+                </tr> -->
                 
                 <!-- Puedes agregar más filas según tus productos -->
             </tbody>
-        </table>
+        </table>}
     </div>
 </main>
