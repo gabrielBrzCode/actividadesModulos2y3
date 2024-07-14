@@ -1,5 +1,5 @@
 // injeccion de directivas de Angular, formularios.
-import { Component, Inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 //Esto nos permite interactuar con los formularios
 import { FormsModule } from '@angular/forms';
@@ -15,29 +15,29 @@ import { Router } from '@angular/router';
 })
 export class IngresoComponent {
   // Aqui vamos a injectar nuestra directiva del router
-  router = Inject(Router);
+  router = inject(Router);
 
   //vamos a dar unos datos para validar administracion
   admin = {
-correo: "admin@gmail.com",
-contrasenia: "123"
+    correo: "admin@gmail.com",
+    contrasenia: "123"
 
-  }
+  };
 
-  correo : string = "";
+  correo: string = "";
   contrasenia: string = "";
   // Despues de esto viene la logica para redireccionar a la otra pagina
 
   iniciarSesion() {
     if (this.correo === this.admin.correo && this.contrasenia === this.admin.contrasenia) {
-      // Redirigir al usuario a otra página
-      alert("Bienvenido Admin");
-      this.router.navigate(["/admin"]);
-      
+      alert('Bienvenido Administrador!');
+      this.router.navigate(['/admin']);
     } else {
-      // Mostrar un mensaje de error o realizar otra acción
-      console.log('Correo o contraseña incorrectos');
+      alert('correo o contraseña incorrectos');
     }
   }
 
+
 }
+
+

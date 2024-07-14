@@ -1,1 +1,42 @@
-<p>actualizar works!</p>
+<main>
+
+
+<div   *ngIf="isUpdating" >
+    
+    <div class="row mt-1">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-white bg-secondary mb-2" style="max-width: 25rem;">
+            <div class="card-header  text-center">ACTUALIZACION DE PRODUCTOS</div>
+            <div class="card-body">
+        
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control"  name="nombre"
+            placeholder="Ingrese el nombre del vehiculo" required=""  [(ngModel)]="nombre"/>
+         
+        </div>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="text" class="form-control" placeholder="Ingrese el url de la imagen del vehiculo"  name="imagen" [(ngModel)]="imagen"/>
+        </div>
+       
+        <div class="mb-3">
+            <label for="modelo" class="form-label">Modelo</label>
+            <input type="text" class="form-control" placeholder="Ingrese el modelo del vehiculo"  name="modelo" [(ngModel)]="modelo"/>
+        </div>
+        
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" placeholder="Ingrese el precio del vehiculo" required=""  name="precio" [(ngModel)]="precio"/>
+        </div>
+        
+        <div class="mb-3">
+            <button type="button" class="btn btn-primary mb-3" (click)="actualizarProducto()">Actualizar Producto</button>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+
+</main>
