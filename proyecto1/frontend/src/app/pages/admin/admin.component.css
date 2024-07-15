@@ -5,6 +5,7 @@ main{
 .miTabla{
    width: 80%;
  margin: 0 auto;
+ 
 
 }
 .btn-admin{
@@ -16,7 +17,7 @@ main{
 table {
     table-layout: fixed;
     width: 100%;
-  
+    
     border-collapse: collapse;
     border: 4px solid rgb(28, 116, 164);
   }

@@ -12,7 +12,7 @@
     align-items: center;
     padding: 20px;
     gap: 100px;
-    background-color: rgb(25, 25, 27);
+    background-color: #19191b;
 margin: 0 auto;
     color: white;
     text-decoration: none;
@@ -33,16 +33,21 @@ margin: 0 auto;
 }
 
 
-.firma a {
+.firma{
+width: 100px;
+height: 50px;
+position: relative;
+right: 5%;
 
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-family: 'Ruby Buster', sans-serif;
-    font-size: 20px;
-    color: white;
-    text-shadow: 4px 20px 20px rgb(0, 128, 255);
-    font-weight: 100;
-
+}
+.firma img{
+padding-bottom: 20px;
+width: 120px;
+height: 120px;
+position: absolute;
+top: 0;
+right: 29%;
+margin-top: -20px;
 
 }
 

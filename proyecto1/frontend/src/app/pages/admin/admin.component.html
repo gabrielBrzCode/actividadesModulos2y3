@@ -1,6 +1,6 @@
 <main>
-    <div class=" mt-4 pb-5 bg-dark miTabla ">
-        <h2 class="mb-4 text-center text-white">Tabla de Productos</h2>
+    <div class=" mt-4 pb-5 miTabla ">
+        <h2 class="mb-4 text-center text-white ">Tabla de Productos</h2>
          <div class="btn-admin">
             <button [routerLink]="['/crear']" type="button" class="btn btn-success m-2" >Crear nuevo producto</button>
        
@@ -28,7 +28,7 @@
                     </td>
                     <td>${{producto.precio }}0</td>
                <td> <button type="button" class="btn btn-dark m-2" (click)="eliminarProducto(producto._id)">Eliminar</button>
-                <button [routerLink]="['/actualizar/:id']"   type="button" class="btn btn-primary m-2">Actualizar</button></td>
+                <button type="button" class="btn btn-primary m-2"(click)="actualizarProducto(producto._id)">Actualizar</button></td>
                 </tr>
 
                 

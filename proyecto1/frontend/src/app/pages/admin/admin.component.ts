@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductosComponent } from '../productos/productos.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -27,7 +28,11 @@ export class AdminComponent {
  precio:number = 0;
  modelo ="";
 
+ constructor(private router: Router) {}
 
+  actualizarProducto(id: string) {
+    this.router.navigate(['/actualizar', id]);
+  }
 
 
 
@@ -75,4 +80,6 @@ export class AdminComponent {
     }
   }
 
+
+  
 }

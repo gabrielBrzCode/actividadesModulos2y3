@@ -2,26 +2,29 @@
 
 
 
+<main>
+    <div class="container">
+        <div class="row">
+          @for( producto of allProducts; track $index){
+            <div class="col-4">
+              <div class="wrapper">
+                <img src="{{producto.imagen}}" alt="">
+                <h1>{{producto.nombre}}</h1>
+                <p>{{producto.modelo}}</p>
+              </div>
+              <div class="button-wrapper">
+                <p class="btn outline">${{producto.precio}}.00</p>
+                <button class="btn fill">COMPRAR</button>
+              </div>
+            </div>
+        }
+        </div>
+    
+      </div>
+    
 
-<div class="container">
-    @for(producto of allProducts; track $index){
-    <div class="wrapper row col-3 ">
-        <img src="{{producto.imagen}}" alt="">
-        <h1>{{producto.nombre}} </h1>
-        <p> {{producto.modelo}}<br/>
-        </p>
-    </div>
-    <div class="button-wrapper">
 
-        <p class="btn outline ">${{producto.precio}}0</p>
-        <button class="btn fill">COMPRAR</button>
-    </div>
-    }
-
-
-
-
-
+    </main>
 
     <!-- <div class="wrapper">
         <div class="banner-image2"> </div>
@@ -49,4 +52,3 @@
             US$85,000.00 </p>
         <button class="btn fill ">COMPRAR</button>
     </div> -->
-</div>

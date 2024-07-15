@@ -1,4 +1,8 @@
 import { Injectable, inject } from '@angular/core';
+import { Producto } from '../interfaces/product';
+import { Observable } from 'rxjs';
+
+
 // esto nos permite hacer peticiones al back o a un API
 import { HttpClient } from '@angular/common/http';
 @Injectable({
@@ -6,16 +10,26 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductsService {
 
-  constructor() { }
+  constructor( private http: HttpClient) { }
   httpClient = inject(HttpClient);
-
+  private API_URL = 'http://localhost:3000'; // Base URL del API
   API_URL_GET = "http://localhost:3000/obtenerProductos";
   API_URL_POST = "http://localhost:3000/crearProducto";
   API_URL_PUT = "http://localhost:3000/actualizarProducto";
   API_URL_DELTE = "http://localhost:3000/borrarProducto";
 
   //OBTENER DATOS
+ 
 
+  getProductById(id: string): Observable<Producto> {
+    return this.http.get<Producto>(`${this.API_URL}/productos/${id}`);
+  }
+
+
+  
+  updateProduct(id: string, producto: Producto): Observable<any> {
+    return this.http.put(`${this.API_URL_PUT}/${id}`, producto);
+  }
   getProducts() {
     // hago la pericion get
     return this.httpClient.get(this.API_URL_GET);

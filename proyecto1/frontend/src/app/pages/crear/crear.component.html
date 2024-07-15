@@ -3,7 +3,7 @@
     
     <div class="row mt-1">
     <div class="col-lg-4 offset-lg-4">
-        <div class="card text-white bg-secondary mb-2" style="max-width: 25rem;">
+        <div class="card text-white bg-dark mb-2" style="max-width: 25rem;">
             <div class="card-header  text-center">FORMULARIO DE CREACION DE PRODUCTOS</div>
             <div class="card-body">
         
@@ -15,7 +15,8 @@
         </div>
         <div class="mb-3">
             <label for="imagen" class="form-label">Imagen</label>
-            <input type="text" class="form-control" placeholder="Ingrese el url de la imagen del vehiculo"  name="imagen" [(ngModel)]="imagen"/>
+            <input type="text" class="form-control"
+             placeholder="Ingrese el url de la imagen del vehiculo"  name="imagen" [(ngModel)]="imagen"/>
         </div>
        
         <div class="mb-3">
@@ -28,9 +29,14 @@
             <input type="number" class="form-control" placeholder="Ingrese el precio del vehiculo" required=""  name="precio" [(ngModel)]="precio"/>
         </div>
         
-        <div class="mb-3">
-            <button type="submit" class="btn btn-primary mb-3" (click)="crearProducto()">Crear Producto</button>
-        </div>
+             <div class="row mt-2 text-center">
+                        <div class="col-lg-6">
+                            <button routerLink="/admin" type="button" class="btn btn-secondary">Volver</button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="submit" class="btn btn-primary"(click)="crearProducto()">Aceptar</button>
+                        </div>
+                    </div>
     </div>
     </div>
     </div>
@@ -61,10 +67,10 @@
                     </span>
                     <div class="row mt-2 text-center">
                         <div class="col-lg-6">
-                            <button routerLink="/" type="button" class="btn btn-secondary">Volver</button>
+                            <button routerLink="/admin" type="button" class="btn btn-secondary">Volver</button>
                         </div>
                         <div class="col-lg-6">
-                            <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Aceptar</button>
+                            <button type="submit" class="btn btn-primary">Aceptar</button>
                         </div>
                     </div>
                 </form>
