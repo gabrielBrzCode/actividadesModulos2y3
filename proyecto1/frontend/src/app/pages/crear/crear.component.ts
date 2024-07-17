@@ -1,5 +1,5 @@
 import { Component, inject,} from '@angular/core';
-
+import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ProductsService } from '../../services/products.service';
 import { Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { ReactiveFormsModule, } from '@angular/forms';
 @Component({
   selector: 'app-crear',
   standalone: true,
-  imports: [FormsModule, CommonModule, ProductosComponent, ReactiveFormsModule],
+  imports: [FormsModule, CommonModule, ProductosComponent, ReactiveFormsModule, RouterLink],
   templateUrl: './crear.component.html',
   styleUrl: './crear.component.css'
 })

@@ -3,7 +3,7 @@ import { inject } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { FormsModule } from '@angular/forms';
 import { ProductosComponent } from '../productos/productos.component';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -12,7 +12,7 @@ import { Producto } from '../../interfaces/product';
 @Component({
   selector: 'app-actualizar',
   standalone: true,
-  imports: [FormsModule, ProductosComponent, CommonModule],
+  imports: [FormsModule, ProductosComponent, CommonModule, RouterLink],
   templateUrl: './actualizar.component.html',
   styleUrl: './actualizar.component.css'
 })

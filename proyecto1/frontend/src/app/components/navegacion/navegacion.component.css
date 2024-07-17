@@ -1,34 +1,38 @@
-@import url('https://fonts.cdnfonts.com/css/ruby-buster');
 
-
+@import url('https://fonts.cdnfonts.com/css/mate-sc');
+/* 
+font-family: 'Mate SC', sans-serif; */
 
 
 .miLista {
     display: flex;
     width: 80%;
     height: 90px;
+    font-family: 'Mate SC', sans-serif;
     position: relative;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     gap: 100px;
     background-color: #19191b;
-margin: 0 auto;
+    margin: 0 auto;
     color: white;
     text-decoration: none;
     list-style: none;
 }
 
 .miLista::after {
+    
     background-color: transparent;
     content: "";
     position: absolute;
-    right: -10px;
+    top: 0;
+    right: -5px;
     width: 0;
     height: 0;
-    border-left: 80px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 100px solid rgba(255, 255, 255, 0.123);
+    border-left: 80px solid transparent ;
+    border-right: 6px solid black;
+    border-top: 91px solid black;
     z-index: 200;
 }
 

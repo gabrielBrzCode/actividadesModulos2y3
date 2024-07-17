@@ -22,32 +22,37 @@ main{
 }
 
 .container {
-
-width: 90%;
-height: 130vh;
-  background-color: rgba(17, 25, 40, 0.25);
+  width: 90%; /* Porcentaje del ancho del contenedor */
+  height: 130vh; /* 130% del alto de la ventana */
+  background-color: rgba(17, 25, 40, 0.622);
   border-radius: 15px;
-  padding: 30px;  
-  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  padding: 30px;
+
+  filter: drop-shadow(0 0 5px rgba(255, 222, 222, 0.942));
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   text-align: center;
-  border: solid 20px rgba(255, 255, 255, 0.236);
+  border: solid 20px rgba(8, 7, 7, 0.607);
   margin: 0 auto;
+  overflow: hidden;
+  transition: width 1s ease-in-out; 
 }
- .container img{
+
+.container img {
   border: solid 1px white;
   border-radius: 15px;
-  width: 300px;
-  height: 200px;
-  object-fit:cover;
-  
- }
+  width: 300px; /* Ancho inicial de la imagen */
+  height: 200px; /* Alto inicial de la imagen */
+  object-fit: cover;
+  transition: width 0.5s, height 0.5s; /* Transiciones separadas para width y height */
+}
 
-
-
+.container img:hover {
+  width: 420px; /* Ancho aumentado al pasar el mouse */
+  height: 250px; /* Alto aumentado al pasar el mouse */
+  border: solid 5px rgba(0, 0, 0, 0.679);
+}
 h1{
   font-family: 'Mate SC', sans-serif; 
   color: rgba(255,255,255,0.98);
@@ -68,6 +73,7 @@ p {
 
 .button-wrapper{
   margin: 20px;
+ 
 }
 
 .btn {
@@ -77,6 +83,7 @@ p {
   font-size: 12px;  
   letter-spacing: 2px;  
   cursor: pointer;
+  margin: 5px;
 }
 
 
@@ -106,7 +113,7 @@ p {
 }
 
 .fill:hover{
-  transform: scale(1.125);  
+  transform: scale(1.525);  
   border-color: rgba(255, 255, 255, 0.9);
   filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
   transition: all .3s ease;    

@@ -6,6 +6,8 @@ import { ProductosComponent } from '../productos/productos.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-admin',
@@ -28,7 +30,7 @@ export class AdminComponent {
  precio:number = 0;
  modelo ="";
 
- constructor(private router: Router) {}
+ constructor(private router: Router,private dialog: MatDialog) {}
 
   actualizarProducto(id: string) {
     this.router.navigate(['/actualizar', id]);
@@ -66,6 +68,10 @@ export class AdminComponent {
   }
   eliminarProducto(id:string){
     if(id){
+      const dialogRef = this.dialog.open(ConfirmDialogComponent);
+
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
       this.productService.deleteProduct(id).subscribe((req:any)=>{
         if(req){
           alert("Producto eliminado satisfactoriamente");
@@ -82,4 +88,5 @@ export class AdminComponent {
 
 
   
-}
+)}}}
+

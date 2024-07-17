@@ -1,6 +1,6 @@
 // injeccion de directivas de Angular, formularios.
 import { Component, inject } from '@angular/core';
-
+import { RouterLink } from '@angular/router';
 //Esto nos permite interactuar con los formularios
 import { FormsModule } from '@angular/forms';
 // Esto nos permite hacer la redireccion a otra pagina
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-ingreso',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './ingreso.component.html',
   styleUrl: './ingreso.component.css'
 })

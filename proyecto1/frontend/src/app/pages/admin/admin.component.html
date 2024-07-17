@@ -1,33 +1,36 @@
 <main>
     <div class=" mt-4 pb-5 miTabla ">
-        <h2 class="mb-4 text-center text-white ">Tabla de Productos</h2>
+        <h2 class="mb-4 text-center text-white tituloh2">Tabla de Productos</h2>
          <div class="btn-admin">
             <button [routerLink]="['/crear']" type="button" class="btn btn-success m-2" >Crear nuevo producto</button>
        
            
         </div>
  
-        @for(producto of allProducts; track $index){
-        <table class="table table-bordered text-center ">
-            <thead>
+      
+        <table class="table table-bordered text-center">
+            <thead >
                 <tr>
-                    <th>Nombre</th>
-                    <th>Imagen</th>
-                    <th>Modelo</th>
-                    <th>Precio</th>
-                    <th>Gestion de productos</th>
+                    <th class="dataBox">Nombre</th>
+                    <th class="dataBox">Imagen</th>
+                    <th class="dataBox">Modelo</th>
+                    <th class="dataBox">Precio</th>
+                    <th class="dataBox">Gestion de productos</th>
                   
                 </tr>
             </thead>
+            @for(producto of allProducts; track $index){
             <tbody>
+                
                 <tr>
-                    <td>{{producto.nombre}}</td>
-                    <td><img src="{{producto.imagen}}" alt="Imagen del Producto" style="max-width: 100px;"></td>
-                    <td>
+                    
+                    <td class="dataBox">{{producto.nombre}}</td>
+                    <td class="dataBox"><img src="{{producto.imagen}}" alt="Imagen del Producto" style="max-width: 100px;"></td>
+                    <td class="dataBox">
                         {{producto.modelo}}
                     </td>
-                    <td>${{producto.precio }}0</td>
-               <td> <button type="button" class="btn btn-dark m-2" (click)="eliminarProducto(producto._id)">Eliminar</button>
+                    <td class="dataBox">${{producto.precio }}0</td>
+               <td class="dataBox"> <button type="button" class="btn btn-light m-2" (click)="eliminarProducto(producto._id)">Eliminar</button>
                 <button type="button" class="btn btn-primary m-2"(click)="actualizarProducto(producto._id)">Actualizar</button></td>
                 </tr>
 <!-- Este vendria siendo componente padre x)
@@ -50,7 +53,7 @@
                 ░▀░░░░░░░░░░█░█░█░█░█░░░░░░░░░░▀░
                 ░░░░░░░░░░░░▀███████▀░░░░░░░░░░░░
                 ░░░░░░░░░░░░░░▀▀█▀▀░░░░░░░░░░░░░░ -->
-            </tbody>
-        </table>}
+            </tbody>}
+        </table>
     </div>
 </main>

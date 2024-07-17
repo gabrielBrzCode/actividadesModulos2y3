@@ -1,6 +1,7 @@
 <main>
     <form>
         <div class="miForm">
+          <p>Inicio de sesión</p>
           <div class="form-floating mb-4 mt-4">
             <input type="email" class="form-control" name="correo" placeholder="name@example.com"[(ngModel)]="correo">
             <label for="floatingInput">Correo electronico</label>
@@ -11,8 +12,14 @@
             <label for="floatingPassword">Clave</label>
 
           </div>
-    
-        <button type="submit" class="btn btn-dark mt-4" (click)="iniciarSesion()">Entrar</button>
+          <div class="row mt-5 text-center">
+            <div class="col-lg-6">
+                <button routerLink="/inicio" type="button" class="btn btn-secondary">Volver</button>
+            </div>
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-primary"(click)="iniciarSesion()">Aceptar</button>
+            </div>
+        </div>
     </div>
       </form>
 </main>
