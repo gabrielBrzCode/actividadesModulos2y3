@@ -8,11 +8,12 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
+import { CargandoComponent } from '../../components/cargando/cargando.component';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [FormsModule, ProductosComponent,RouterLink,RouterLinkActive, CommonModule],
+  imports: [FormsModule, ProductosComponent,RouterLink,RouterLinkActive, CommonModule, CargandoComponent],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })
@@ -29,6 +30,7 @@ export class AdminComponent {
   imagen = "";
  precio:number = 0;
  modelo ="";
+ loading: boolean = false; // Variable para mostrar el estado de carga
 
  constructor(private router: Router,private dialog: MatDialog) {}
 
@@ -45,21 +47,24 @@ export class AdminComponent {
 
 
   obtenerDatos() {
-
-
-
-
+    this.loading = true; // Mostrar estado de carga
+    
     this.productService.getProducts().subscribe((res: any) => {
 
       if (res) {
         console.log("res", res);
         this.allProducts = res;
+        setTimeout(() => {
+          this.loading = false; // Desactiva el loading después de un tiempo
+        }, 1200); // Simulación de tiempo de carga prolongado (3 segundos)
       }
       else {
         console.log("hubo un error")
+        this.loading = false;
       }
 
     });
+
 
   }
   ngOnInit() {

@@ -9,7 +9,7 @@ font-family: 'Mate SC', sans-serif; */
 
 main{
   width: 100%;
-  height: 100vh;
+  height: 140vh;
 }
 
 .Venta{
@@ -45,13 +45,13 @@ main{
   width: 300px; /* Ancho inicial de la imagen */
   height: 200px; /* Alto inicial de la imagen */
   object-fit: cover;
-  transition: width 0.5s, height 0.5s; /* Transiciones separadas para width y height */
+  transition: width 0.8s, height 0.8s; /* Transiciones separadas para width y height */
 }
 
 .container img:hover {
   width: 420px; /* Ancho aumentado al pasar el mouse */
   height: 250px; /* Alto aumentado al pasar el mouse */
-  border: solid 5px rgba(0, 0, 0, 0.679);
+  border: solid 5px rgba(255, 252, 252, 0.679);
 }
 h1{
   font-family: 'Mate SC', sans-serif; 

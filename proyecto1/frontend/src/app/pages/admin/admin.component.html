@@ -1,4 +1,14 @@
 <main>
+
+    <div *ngIf="loading; else content">
+        <app-cargando>
+          
+        </app-cargando>
+      </div>
+      
+      <ng-template #content>
+
+
     <div class=" mt-4 pb-5 miTabla ">
         <h2 class="mb-4 text-center text-white tituloh2">Tabla de Productos</h2>
          <div class="btn-admin">
@@ -56,4 +66,5 @@
             </tbody>}
         </table>
     </div>
+      </ng-template>
 </main>

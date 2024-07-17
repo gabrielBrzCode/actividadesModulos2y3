@@ -1,3 +1,15 @@
+
+<div *ngIf="loading; else content">
+  <app-cargando>
+    
+  </app-cargando>
+</div>
+
+<ng-template #content>
+
+
+
+
 <h1 class="Venta">VEHICULOS EN VENTA</h1>
 
 
@@ -26,4 +38,4 @@
 
     </main>
 
-    
+  </ng-template>
