@@ -22,7 +22,7 @@ main{
 }
 
 .container {
-  width: 90%; /* Porcentaje del ancho del contenedor */
+  width: 80%; /* Porcentaje del ancho del contenedor */
   height: 130vh; /* 130% del alto de la ventana */
   background-color: rgba(17, 25, 40, 0.622);
   border-radius: 15px;
@@ -49,8 +49,8 @@ main{
 }
 
 .container img:hover {
-  width: 420px; /* Ancho aumentado al pasar el mouse */
-  height: 250px; /* Alto aumentado al pasar el mouse */
+  width: 400px; /* Ancho aumentado al pasar el mouse */
+  height: 220px; /* Alto aumentado al pasar el mouse */
   border: solid 5px rgba(255, 252, 252, 0.679);
 }
 h1{
