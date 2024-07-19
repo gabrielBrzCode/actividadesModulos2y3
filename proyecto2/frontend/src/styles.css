@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background:  rgb(190,68,238);
+  
+   
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background:radial-gradient(circle, rgba(190,68,238,1) 0%, rgba(37,9,49,0.9557072829131653) 100%);}
