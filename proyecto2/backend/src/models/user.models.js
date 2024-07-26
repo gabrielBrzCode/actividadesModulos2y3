@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     unique:true
  },
 
- contraseña:{
+ contrasena:{
     type:String,
     required : true,
 
