@@ -1,11 +1,34 @@
 import { userModel } from "../models/user.models.js";
 
+import bcrypt from "bcryptjs"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // peticion POST para crear usuarios
 export const postUser = async (request, response) => {
 
 try{
+ const {nombreCompleto, correo, contrasena}= request.body;
+ const codedPasswordUser = await bcrypt.hash(contrasena, 10 ) ;
 
-    const newUser = await userModel.create(request.body);
+
+
+    const newUser = await userModel.create({
+        nombreCompleto,
+        correo,
+        contrasena: codedPasswordUser
+    });
  //.save tambien sirve como metodo create
  
  

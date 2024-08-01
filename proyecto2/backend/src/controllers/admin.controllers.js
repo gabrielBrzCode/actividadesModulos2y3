@@ -1,14 +1,21 @@
 import { adminModel } from "../models/admin.models.js";
-
+import bcrypt from "bcryptjs";
 
 // peticion POST para crear administradores
 export const postAdmin = async (request, response) => {
     try{
 const {nombreCompleto, correo, contrasena} = request.body;
-        const newAdmin = await adminModel.create({
+       
+//voy a tomar la contraseña del cuerpo de mi peticion y la voy a encriptar
+//1. le debo pasar la contraseña del usuario
+// 2. Salt Rounds -> nivel de encriptacion -> es un numero(mientras mas alto mas encriptada es)
+const codedPassword = await bcrypt.hash(contrasena, 10);
+
+
+const newAdmin = await adminModel.create({
 nombreCompleto,
 correo,
-contrasena, 
+contrasena: codedPassword, 
 categoriaAdmin: true
 
 

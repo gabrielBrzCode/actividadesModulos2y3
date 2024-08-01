@@ -5,6 +5,7 @@ import cors from "cors";
  import { conectionMongo } from "./config/dataBase.js"; 
 import adminRouter from "./routes/admin.routes.js";
 import userRouter from "./routes/user.routes.js";
+import loginRouter from "./routes/login.routes.js";
 2.// configuraciones
 
 const app = express();
@@ -23,7 +24,7 @@ conectionMongo();
 app.use(express.json())
 app.use("/users", userRouter);
 app.use("/admin", adminRouter);
-
+app.use("/login", loginRouter);
 app.listen(port, ()=>{
     console.log(`El servidor se está escuchando en: http://localhost:${port}`);
 });
