@@ -60,8 +60,8 @@
 
   <!-- FORMULARIO DE REGISTRO -->
    <div *ngIf="isVisibleRegister">
-    <app-register></app-register>
+    <app-register [toggleLogin]="toggleLogin.bind(this)"></app-register>
    </div>
    <div *ngIf="isVisibleLogin">
-    <app-login></app-login>
+    <app-login [toggleRegister]="toggleRegister.bind(this)" ></app-login>
    </div>
