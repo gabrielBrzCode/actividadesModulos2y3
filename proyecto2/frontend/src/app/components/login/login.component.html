@@ -27,11 +27,11 @@
           <h4 class="text-center">Iniciar sesion</h4>
         <div class="card-body py-5 px-md-5">
           
-          <form>
+          <form [formGroup]="credentialForm" (ngSubmit)="handleSubmit()">
 
               <!-- email input -->
             <div data-mdb-input-init class="form-outline mb-4">
-              <input type="email" class="form-control" name="correo" required />
+              <input type="email" class="form-control" name="correo" required formControlName="email"/>
               <label class="form-label">Correo electronico</label>
             </div>
               <!-- contraseña input -->
@@ -39,12 +39,12 @@
             class="form-outline mb-4">
               <input type="password"
                class="form-control" name="contrasenia" required/>
-              <label class="form-label">Contraseña</label>
+              <label class="form-label" formControlName="password">Contraseña</label>
             </div>
          
            
 <!-- Submit button -->
-            <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Iniciar sesion</button>
+            <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4" >Iniciar sesion</button>
             <div class="d-flex align-items-center justify-content-center pb-4">
               <p class="mb-0 me-2">¿Aun no tienes cuenta?</p>
               <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger"(click)="toggleRegister()" >registrate</button>

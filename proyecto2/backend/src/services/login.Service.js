@@ -53,7 +53,7 @@ export const loginService = async (req, res) => {
         }
         // vakudar si mi usuario ingresado es administrador
 
-        if (userFound.categoriaAdmin) {
+        if (userFound.__t === "Admin" ||  userFound.categoriaAdmin) {
             payload.isAdmin = true;
         }
 

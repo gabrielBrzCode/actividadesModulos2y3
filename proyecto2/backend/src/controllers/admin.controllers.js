@@ -1,5 +1,6 @@
 import { adminModel } from "../models/admin.models.js";
 import bcrypt from "bcryptjs";
+import { generateToken } from "../lib/jwt.js";
 
 // peticion POST para crear administradores
 export const postAdmin = async (request, response) => {
@@ -23,7 +24,8 @@ categoriaAdmin: true
      return response.status(201).json({
     estado: "201",
     mensaje: "Admin creado correctamente",
-    datos: newUser
+    datos: newAdmin,
+    token : token
     
      })
     
@@ -31,7 +33,7 @@ categoriaAdmin: true
     return response.status(400).json({
     estado: "400",
     mensaje: "Ocurrió un problema al crear un administrador",
-    datos: error
+    datos: error.message
     })
     }
        

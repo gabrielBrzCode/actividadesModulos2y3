@@ -5,7 +5,7 @@ dotenv.config();
 //2. configuarar cuál va a ser nuestra clave secreta
 
 
-const secretKey = process.env.JWT_SECRET 
+const secretKey = process.env.JWT_SECRET;
 
 
 // 3. estructurar las funciones para generar y verificar JWT
